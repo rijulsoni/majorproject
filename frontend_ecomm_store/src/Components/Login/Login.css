@@ -1,0 +1,17 @@
+.container {
+    transition: transform 0.3s ease;
+  }
+  
+  .container:hover {
+    transform: scale(1.05);
+  }
+  .btn1s{
+   
+      margin-left: 50px;
+      margin-top: 20px;
+      border-radius: 16px;
+      padding: 12px;
+      background-color: #2f234f;
+      color: whitesmoke;
+  
+  }

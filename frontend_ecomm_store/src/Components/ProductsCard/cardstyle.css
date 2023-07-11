@@ -1,0 +1,136 @@
+.card-ecom{
+  padding: 26px;
+  cursor: pointer;
+    border:2px solid black;
+    margin:10px;display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+/* @media (max-width: 800px) {
+    .card-ecom {
+      flex-direction: column;
+    }
+  } */
+.product-card {
+    border-radius: 16px;
+    border: 1px solid black;
+    margin: 10px;
+    max-width: 15em;
+    background-color: #fff;
+    padding: 1em;
+    box-shadow: 0 5px 5px #e1e1e1;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .product-card img {
+    max-width: 100%;
+  }
+  .product-card h4 {
+    font-size: 1.3em;
+    margin: 0.5em 0;
+    font-weight: bold;
+  }
+  .product-card div {
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h3.ui2-heading {
+    margin-top: 47px;
+    margin-left: 171px;
+    font-family: Metropolis;
+    color: #1a2024;
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 12px;
+}
+.product-card button{
+  background-color:  #2f234f;
+
+}
+  .product-card:hover {
+    background-color: #FFFFF0;
+    color: #fff;
+  }
+  .product-card:hover button {
+    color: whitesmoke;
+    background-color: #E4A11B;
+  }
+  @media screen and (max-width: 576px) {
+    .product-card {
+      font-size: 0.9em;
+    }
+  }
+  
+  .container1, .shopify-policy__container {
+    font-family: Metropolis;
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-gutter);
+    padding-right: var(--container-gutter);
+    --container-outer-margin: 0px;
+}
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1140px;
+}}
+
+element.style {
+  background: white;
+}
+
+@media (min-width: 992px){
+
+
+.container, .container-lg, .container-md, .container-sm {
+  max-width: 960px;
+}
+}
+@media (min-width: 768px){
+
+
+.container, .container-md, .container-sm {
+    max-width: 720px;
+}}
+@media (min-width: 576px){
+
+
+.container, .container-sm {
+    max-width: 540px;
+}}
+.img{
+  height: 122px;
+}
+
+.btn1{
+  /* margin-left: 202px; */
+  width: 157px;
+    margin-top: 81px;
+    margin-left: -6px;
+
+ 
+  border-radius: 16px;
+  padding: 12px;
+  background-color: #2f234f;
+  color: whitesmoke;
+}
+@media(max-width:580px){
+.btn1{
+  margin-left:-26px;
+}
+}
+h3.ui2-heading {
+  margin-top: 47px;
+  margin-left: 79px;
+  font-family: Metropolis;
+  color: #1a2024;
+  font-size: 42px;
+  text-align: left;
+  margin-bottom: 12px;
+}

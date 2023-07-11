@@ -1,0 +1,35 @@
+.container{ 
+    height: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  border-radius: 20px;
+    border: 2px solid black;
+}
+.form{    padding: 13px;}
+.btn{
+        margin-left: 202px;
+        margin-top: 20px;
+        border-radius: 16px;
+        padding: 12px;
+    background-color: #2f234f;
+    color: whitesmoke;
+}
+.btn:hover{
+    color: wheat;
+}
+
+h2{ color: #2f234f;
+    margin: 19px auto;
+    margin-left: 172px;
+}
+@media(max-width:580px){
+    .container{
+        width: 390px;
+    }
+.btn{
+    margin-left:114px; 
+}
+h2{
+    margin-left: 120px;
+}
+}

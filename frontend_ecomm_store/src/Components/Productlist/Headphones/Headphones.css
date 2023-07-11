@@ -1,0 +1,140 @@
+.body {
+    margin: 0;
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.5385;
+    color: #333;
+    text-align: left;
+    background-color: #f5f5f5;
+}
+
+.mt-50{
+    margin-top: 50px;
+}
+.mb-50{
+    margin-bottom: 50px;
+}
+
+
+.bg-teal-400 { 
+    background-color: #26a69a;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+
+.fa {
+        color: red;
+}
+.col-md-10 {
+    flex: 0 0 auto;
+    width: 104%;
+}
+.btnpro{
+
+
+  
+    margin-top: 20px;
+    border-radius: 16px;
+    padding: 12px;
+    background-color: #2f234f;
+    color: whitesmoke;
+}
+.productname{
+    color: black;
+    font-size: 30px;
+    font-family: inherit;
+}
+.productcategory{
+    font-size: 19px;
+}
+.sidebar {
+    width: 200px;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.sidebar h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 5px;
+}
+
+.sidebar button {
+  background-color: #eaeaea;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.clear-filter {
+  background-color: #eaeaea;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.clear-filter:hover {
+  background-color: #dcdcdc;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    margin-bottom: 20px;
+  }
+}
+.body {
+    display: flex;
+  }
+  
+  .sidebar {
+    flex: 0 0 200px; /* Set the width of the sidebar */
+    background-color: #f8f8f8;
+    padding: 20px;
+  }
+  
+  .contain {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 400px) {
+    .body {
+      flex-direction: column; /* Stack the components vertically on smaller screens */
+    }
+  
+    .sidebar {
+      margin-bottom: 20px;
+    }
+  
+    .contain {
+      margin-left: 0; /* Reset the margin for the product container */
+    }
+  }
+  
+  .sticky-sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #f8f8f8;
+    padding: 20px;
+  }
+  
