@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast"
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import axios from "axios";
+import { useAuth } from '../context/auth';
 import {useNavigate} from "react-router-dom"
 import "./MakePayment.css"
 export default function MakePayment() {
 const  navigate=useNavigate()
+const [auth, setAuth] = useAuth();
   const [shippingData, setShippingData] = useState([]);
 
   const [totalAmount, setTotalAmount] = useState(null);
@@ -14,17 +16,17 @@ const  navigate=useNavigate()
   const [error, setError] = useState(null);
   const [clientSecretkey,setClientSecret]=useState("")
   console.log(totalAmount)
- 
- 
-  
+
+
+
 
   const fetchOrderData = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_SERVER_DOMAIN}/api/orders/648acb14cd74fe53284f7055`);
+      const response = await axios.get(`${process.env.REACT_APP_SERVER_DOMAIN}/api/orders/${auth.data._id}`);
       const data = response.data;
       const calculatedAmount = ((0.18 * data.totalPrice) + data.totalPrice).toFixed(2);
       setTotalAmount(calculatedAmount);
-      
+
       console.log(data);
     } catch (error) {
       console.log(error);
@@ -45,14 +47,14 @@ const  navigate=useNavigate()
         console.error("Error fetching shipping data:", error);
       });
   }, []);
-  
+
   useEffect(() => {
     const createPaymentIntent = async () => {
       try {
         if (totalAmount !== null) {
           const response = await axios.post(`${process.env.REACT_APP_SERVER_DOMAIN}/payment/create`, { totalprice: totalAmount });
           setClientSecret(response.data.clientSecret)
-          
+
           // Handle the response data
         }
       } catch (error) {
@@ -60,7 +62,7 @@ const  navigate=useNavigate()
         // Handle any errors
       }
     };
-  
+
     createPaymentIntent();
     console.log('clientSecret is>>>',clientSecretkey)
   }, [totalAmount]);
@@ -106,21 +108,21 @@ const  navigate=useNavigate()
             <p>Country: {shippingData[0].country}</p>
             <p>Phone: {shippingData[0].mobileNumber}</p>
           </div>
-         
+
         ) : (
           <p>No shipping address found.</p>
         )}
       </div>
 
       <div>
-       
+
         <hr />
         <h4>Total Amount : {totalAmount}</h4>
        <hr />
         <div>
         <h5>Payment Method</h5>
           <p>Card Details</p>
-          
+
           <form >
       <CardElement  />
       <hr/>

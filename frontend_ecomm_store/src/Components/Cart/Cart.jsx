@@ -6,10 +6,10 @@ import { useAuth } from '../context/auth';
 import axios from 'axios';
 // import { useParams } from 'react-router-dom';
 export default function Cart() {
-  
- 
- 
-  
+
+
+
+
 
 
   const navigate = useNavigate();
@@ -52,13 +52,13 @@ export default function Cart() {
       .then((response) => {
         setCart([]);
         console.log(response.data);
-     
+
         localStorage.removeItem('cart');
       })
       .catch((error) => {
         console.log(error);
       });
-      
+
   };
 
   return (
@@ -174,7 +174,7 @@ export default function Cart() {
 
           {cart.length > 0 && (
             <Link to={`/shippingform`} style={{ textDecoration: 'none' }}>
-              
+
               <button
                 onClick={placeOrder}
                 style={{
@@ -188,6 +188,7 @@ export default function Cart() {
                   borderRadius: '0',
                 }}
               >
+                1
                 Place Order
               </button>
             </Link>
